@@ -33,7 +33,7 @@ pipeline {
     post {
         always {
             // Clean up Docker images
-            docker.image("node:18.17.1-alpine3.18").remove()
+            docker.image("node:18.17.1-alpine3.18").remove(message: "Image cleanup after pipeline run")
         }
     }
 }
